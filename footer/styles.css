@@ -1,0 +1,115 @@
+/* RESET CSS */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* COLORS */
+:root {
+  --button-primary: #3cb161;
+  --blue-primary: #00386e;
+  --light-green: #d0ecd9;
+  --light-blue: #cecfdc;
+  --dark-gray: #333333;
+  --light-gray: #dcdcdc;
+  --white: #ffffff;
+}
+
+/* CONSTANT STYLINGS */
+a {
+  text-decoration: none;
+  color: var(--white);
+}
+
+.container {
+  max-width: 1440px;
+  width: 100%;
+  margin: 0 auto;
+  padding-left: 128px;
+  padding-right: 128px;
+}
+
+.button {
+  appearance: none;
+  border: none;
+  outline: none;
+  background: none;
+  display: inline-block;
+  font-size: 20px;
+  background-color: var(--button-primary);
+  padding: 12px 16px;
+  border-radius: 8px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out; /* Mozilla Firefox */
+  -webkit-transition: all 0.5s ease-in-out; /* Google Chrome, Opera, Edge */
+}
+
+.button:hover {
+  transform: scale(1.09);
+}
+
+main footer {
+  background: var(--white);
+  padding: 3rem;
+}
+
+main footer img {
+  width: 200px;
+}
+
+main footer .address {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 3rem;
+}
+
+main footer .social i {
+  margin-right: 1rem;
+}
+
+main footer a {
+  color: inherit;
+}
+main footer a:hover {
+  color: var(--blue-primary);
+}
+
+main footer .address .links {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  justify-content: space-around;
+}
+
+main footer .address .links ul {
+  list-style: none;
+}
+
+main footer .address .links ul li {
+  margin-top: 1rem;
+}
+
+/* MEDIA QUERIES */
+@media (max-width: 769px) {
+  main footer .address {
+    flex-direction: column;
+  }
+
+  main footer .address .links {
+    display: none;
+    grid-template-columns: repeat(1, 1fr);
+    margin-top: 1rem;
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+@media (max-width: 800px) {
+  main footer .address {
+    flex-direction: column;
+  }
+}
